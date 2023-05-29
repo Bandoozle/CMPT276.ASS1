@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="/css/histogram.css">
+    <script src="/js/calculate.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>Histogram Generator</h1>
+        </div>
+    </header>
+    
+    <main id="mainpart">
+        <div class="row">
+            <div class="column one" style="background-color: #eaeff1;">
+                <h3>Lower Bounds</h3>
+                    <div class="content1">
+                        <table style:="width: 100%">
+                            <tr>
+                                <td>Max</td>
+                                <td> <input name="grade" type="text" value="100.00" id="maxBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>A+</td>
+                                <td><input name="grade" type="text" value="95.00" id="aplusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td><input name="grade" type="text" value="90.00" id="aBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>A-</td>
+                                <td><input name="grade" type="text" value="85.00" id="aminusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>B+</td>
+                                <td><input name="grade" type="text" value="80.00" id="bplusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                                <td><input name="grade" type="text" value="75.00" id="bBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>B-</td>
+                                <td><input name="grade" type="text" value="70.00" id="bminusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>C+</td>
+                                <td><input name="grade" type="text" value="65.00" id="cplusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td><input name="grade" type="text" value="60.00" id="cBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>C-</td>
+                                <td><input name="grade" type="text" value="55.00" id="cminusBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>D</td>
+                                <td><input name="grade" type="text" value="50.00" id="dBoundary"></td>
+                            </tr>
+                            <tr>
+                                <td>F</td>
+                                <td><input name="grade" type="text" value="0.00" id="fBoundary"></td>
+                            </tr>
+                        </table>
+                        <button id="updateButton" onclick="updateBoundaries()">Update Boundaries</button>
+                        <button id="resetButton" onclick="resetBoundaries()">Reset</button>
+                    </div>
+                    
+            </div>
+            <div class="column two" style="background-color: #eaeff1;">
+                <h3>Histogram</h3>
+                    <div class="content2">
+                        <div class="content2left">
+                            <tr><td>A+</td></tr><br>
+                            <tr><td>A</td></tr><br>
+                            <tr><td>A-</td></tr><br>
+                            <tr><td>B+</td></tr><br>
+                            <tr><td>B</td></tr><br>
+                            <tr><td>B-</td></tr><br>
+                            <tr><td>C+</td></tr><br>
+                            <tr><td>C</td></tr><br>
+                            <tr><td>C-</td></tr><br>
+                            <tr><td>D</td></tr><br>
+                            <tr><td>F</td></tr>
+                        </div>
+                        <div id="histogram">
+
+                        </div>
+                    </div>
+            </div> 
+            <div class="column three" style="background-color: #eaeff1;">
+                <form id="myForm">
+                    New Grade: <input type="number" step="any" id="newGrade">
+                    <button onclick="addGrade(); document.getElementById('newGrade').value = ''">Add</button>
+                </form>
+            </div>
+        </div>
+    <main>
+</body>
+</html>
